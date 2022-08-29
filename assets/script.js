@@ -33,12 +33,15 @@ function generateGame() {
     `
     );
   }
-  verifySequences();
 
-  for (let i = 0; i <= 60; i++) {
-    dropBoxes();
+  for (let a = 0; a <= 60; a++) {
+    verifySequences();
+
+    for (let i = 0; i <= 60; i++) {
+      dropBoxes();
+    }
+    addNewItens();
   }
-  addNewItens();
 }
 
 //seleciona o local da fruta ao clicar no elemento e armazena na variável selectedFruit
