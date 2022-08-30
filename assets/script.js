@@ -168,6 +168,7 @@ function addNewItens() {
   }
 }
 
+//set row position for a div number
 function setRowClass(i) {
   let rowClass = 0;
   if (i >= 0 && i <= 7) {
@@ -188,6 +189,7 @@ function setRowClass(i) {
   return rowClass;
 }
 
+//set column position for a number
 function setColumnClass(i) {
   let columnClass = 0;
   if (
@@ -274,8 +276,9 @@ function setColumnClass(i) {
   return columnClass;
 }
 
+//Update score
 function setScore(score) {
-  document.getElementById("title").innerText = `Your Score: ${score}`;
+  document.getElementById("title").innerText = `Your score: ${score}`;
 }
 
 generateGame();
