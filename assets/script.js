@@ -42,6 +42,7 @@ function generateGame() {
     }
     addNewItens();
   }
+  setScore(score);
 }
 
 //seleciona o local da fruta ao clicar no elemento e armazena na variável selectedFruit
