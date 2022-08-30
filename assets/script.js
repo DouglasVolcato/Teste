@@ -83,6 +83,7 @@ function setSelectedFruit(num) {
       selectedFruit = 0;
     }
   }
+  setScore(score);
 }
 
 //função para colorir a fruta escolhida
@@ -273,8 +274,8 @@ function setColumnClass(i) {
   return columnClass;
 }
 
-function setScore(score){
-  document.getElementById("title").innerText = "teste"
+function setScore(score) {
+  document.getElementById("title").innerText = `Your Score: ${score}`;
 }
 
 generateGame();
