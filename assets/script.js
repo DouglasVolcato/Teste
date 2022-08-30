@@ -47,6 +47,8 @@ function generateGame() {
 //seleciona o local da fruta ao clicar no elemento e armazena na variável selectedFruit
 //caso a primeira fruta já tenha sido selecionada, ele muda as duas de lugar
 function setSelectedFruit(num) {
+  // document.getElementById("#title").innerText = `Your score: ${score}`;
+
   if (selectedFruit === 0) {
     selectedFruit = num;
     colorItem(selectedFruit, "gold");
@@ -68,13 +70,15 @@ function setSelectedFruit(num) {
 
       selectedFruit = 0;
 
-      verifySequences();
+      for (let a = 0; a <= 60; a++) {
+        verifySequences();
 
-      for (let i = 0; i <= 60; i++) {
-        dropBoxes();
+        for (let i = 0; i <= 60; i++) {
+          dropBoxes();
+        }
+
+        addNewItens();
       }
-
-      addNewItens();
     } else {
       selectedFruit = 0;
     }
@@ -125,9 +129,11 @@ function verifySequences() {
     }
   }
   for (let n of arrColumns) {
+    score = score + 1;
     n.innerText = "";
   }
   for (let n of arrRows) {
+    score = score + 1;
     n.innerText = "";
   }
 }
@@ -265,6 +271,10 @@ function setColumnClass(i) {
     columnClass = 8;
   }
   return columnClass;
+}
+
+function setScore(score){
+  document.getElementById("title").innerText = "teste"
 }
 
 generateGame();
